@@ -1,6 +1,6 @@
 # my-portfolio
 
-> A Sample Portfolio
+> A Sample Portfolio using Vue Js
 
 ## Build Setup
 
