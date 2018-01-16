@@ -1,4 +1,5 @@
 <template>
+<div class="container">
 <div class="row">
 <div class="col-lg-8 mx-auto">
   <form>
@@ -48,6 +49,7 @@
   <button type="submit" class="btn btn-primary">Sign in</button>
   </form> 
 </div>  
+</div>
 </div>
 </template>
 <script>

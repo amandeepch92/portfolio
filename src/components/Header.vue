@@ -7,7 +7,7 @@
 	  </button>
 	  <div class="collapse navbar-collapse" id="navbarNav">
 	    <ul class="navbar-nav ml-auto">
-	      <router-link to="/" tag="li" class="nav-item rounded" active-class="active"><a class="nav-link">Home</a></router-link>
+	      <router-link to="/portfolio" tag="li" class="nav-item rounded" active-class="active"><a class="nav-link">Home</a></router-link>
           <router-link to="/about" tag="li" class="nav-item rounded" active-class="active"><a class="nav-link">About</a></router-link>
           <router-link to="/contact" tag="li" class="nav-item rounded" active-class="active"><a class="nav-link">Contact</a></router-link>
 	    </ul>
