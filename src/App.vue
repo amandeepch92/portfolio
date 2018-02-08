@@ -27,9 +27,5 @@ export default {
 }
 .copyright{
   background-color: #1a252f;
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  left:0
 }
 </style>

@@ -16,8 +16,10 @@ export default {
 .copyright{
   background-color: #1a252f;
   position: absolute;
-  right: 0;
   bottom: 0;
-  left:0
+  width: 100%;
+  margin-top: 10px;
+  height: 80px;
+  line-height: 60px;
 }
 </style>

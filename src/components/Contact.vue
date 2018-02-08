@@ -1,62 +1,81 @@
 <template>
+<div>
+<div class="col-lg-auto mx-auto mt-1 mb-1">
+  <div class="card">
+    <img class="img-fluid contactme" :src="contactMe" alt="Card image cap">
+  </div>
+</div>
 <div class="container">
 <div class="row">
-<div class="col-lg-8 mx-auto">
+<div class="col-lg-8 mx-auto mt-5">
   <form>
   <div class="form-row">
     <div class="form-group col-md-6">
-      <label for="inputEmail4">Email</label>
-      <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+      <input type="email" class="form-control" placeholder="Email" v-model="user.email">
     </div>
     <div class="form-group col-md-6">
-      <label for="inputPassword4">Password</label>
-      <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
+      <input type="text" class="form-control" placeholder="Subject" v-model="user.subject">
     </div>
   </div>
   <div class="form-group">
-    <label for="inputAddress">Address</label>
-    <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+    <input type="textarea" class="form-control" placeholder="Message" v-model="user.message">
   </div>
-  <div class="form-group">
-    <label for="inputAddress2">Address 2</label>
-    <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
-  </div>
-  <div class="form-row">
-    <div class="form-group col-md-6">
-      <label for="inputCity">City</label>
-      <input type="text" class="form-control" id="inputCity">
-    </div>
-    <div class="form-group col-md-4">
-      <label for="inputState">State</label>
-      <select id="inputState" class="form-control">
-        <option selected>Choose...</option>
-        <option>...</option>
-      </select>
-    </div>
-    <div class="form-group col-md-2">
-      <label for="inputZip">Zip</label>
-      <input type="text" class="form-control" id="inputZip">
-    </div>
-  </div>
-  <div class="form-group">
-    <div class="form-check">
-      <input class="form-check-input" type="checkbox" id="gridCheck">
-      <label class="form-check-label" for="gridCheck">
-        Check me out
-      </label>
-    </div>
-  </div>
-  <button type="submit" class="btn btn-primary">Sign in</button>
+  <button class="btn btn-primary" v-on:click="checkInput">Submit</button>
   </form> 
 </div>  
 </div>
 </div>
+</div>
 </template>
 <script>
+const contact_img = require('@/assets/contactme.jpg');
+
 export default {
-  name: 'Contact'
+  name: 'contact',
+  data () {
+    return {
+        title: 'Contact me',
+        contactMe: contact_img,
+        alertMsg:'',
+        user:{
+          message:'',
+          subject:'',
+          email:''
+        }  
+    }
+  },
+  methods: {
+    checkInput: function () {
+        if((this.user.email=== '') || (!this.validateEmail(this.user.email))){
+            this.alertMsg = 'Please enter a valid e-mail address!';
+            alert(this.alertMsg);
+            return;
+        }
+        if(this.user.subject=== ''){
+            this.alertMsg = 'Please enter a subject!';
+            alert(this.alertMsg);
+            return;
+        }
+        if(this.user.message === ''){
+            this.alertMsg = 'Please enter your message!';
+            alert(this.alertMsg);
+            return;
+        }
+        this.alertMsg = ''; 
+        this.$http.post('https://my-vue-js.firebaseio.com/user.json',this.user)
+                  .then(response=>{
+                    alert('Form Submitted Successfully');
+                  },error=>{alert('Error While Submitting')});
+    },
+    validateEmail: function(email) {
+        var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        return re.test(email);
+    }
+  }
 }
 </script>
-
 <style>
+.contactme{
+  height: 45vh;
+}
 </style>  
