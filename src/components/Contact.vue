@@ -6,24 +6,46 @@
   </div>
 </div>
 <div class="container">
-<div class="row">
-<div class="col-lg-8 mx-auto mt-5">
-  <form>
-  <div class="form-row">
-    <div class="form-group col-md-6">
-      <input type="email" class="form-control" placeholder="Email" v-model="user.email">
-    </div>
-    <div class="form-group col-md-6">
-      <input type="text" class="form-control" placeholder="Subject" v-model="user.subject">
-    </div>
+  <div class="row">
+      <div class="col-md-12">
+        <div class="well well-sm mt-3">
+          <form class="form-horizontal">
+          <fieldset>
+            <!-- Name input-->
+            <div class="form-group row">
+              <label class="col-md-3 control-label" for="name">Name</label>
+              <div class="col-md-9">
+                <input id="name" name="name" type="text" placeholder="Your name" class="form-control" v-model="user.name">
+              </div>
+            </div>
+    
+            <!-- Email input-->
+            <div class="form-group row">
+              <label class="col-md-3 control-label" for="email">Your E-mail</label>
+              <div class="col-md-9">
+                <input id="email" name="email" type="text" placeholder="Your email" class="form-control" v-model="user.email">
+              </div>
+            </div>
+    
+            <!-- Message body -->
+            <div class="form-group row">
+              <label class="col-md-3 control-label" for="message">Your message</label>
+              <div class="col-md-9">
+                <textarea class="form-control" id="message" name="message" placeholder="Please enter your message here..." rows="5" v-model="user.message"></textarea>
+              </div>
+            </div>
+    
+            <!-- Form actions -->
+            <div class="form-group row">
+              <div class="col-md-3 offset-md-3 text-left">
+                <button v-on:click="checkInput" class="btn btn-primary btn-lg">Submit</button>
+              </div>
+            </div>
+          </fieldset>
+          </form>
+        </div>
+      </div>
   </div>
-  <div class="form-group">
-    <input type="textarea" class="form-control" placeholder="Message" v-model="user.message">
-  </div>
-  <button class="btn btn-primary" v-on:click="checkInput">Submit</button>
-  </form> 
-</div>  
-</div>
 </div>
 </div>
 </template>
@@ -39,7 +61,7 @@ export default {
         alertMsg:'',
         user:{
           message:'',
-          subject:'',
+          name:'',
           email:''
         }  
     }
@@ -51,8 +73,8 @@ export default {
             alert(this.alertMsg);
             return;
         }
-        if(this.user.subject=== ''){
-            this.alertMsg = 'Please enter a subject!';
+        if(this.user.name=== ''){
+            this.alertMsg = 'Please enter a name!';
             alert(this.alertMsg);
             return;
         }

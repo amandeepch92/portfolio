@@ -25,7 +25,5 @@ export default {
   text-align: center;
   color: #2c3e50;
 }
-.copyright{
-  background-color: #1a252f;
-}
+
 </style>
