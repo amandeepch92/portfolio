@@ -84,7 +84,7 @@
                 <div class="item">
                     <h3 class="level-title">Python &amp; Django</h3>
                     <div class="level-bar">
-                        <div class="level-bar-inner" data-level="98%">
+                        <div class="level-bar-inner" :style="{ width: 87 + '%' }" data-level="98%">
                         </div>                                      
                     </div><!--//level-bar-->                                 
                 </div><!--//item-->
@@ -92,7 +92,7 @@
                 <div class="item">
                     <h3 class="level-title">Javascript &amp; jQuery</h3>
                     <div class="level-bar">
-                        <div class="level-bar-inner" data-level="98%">
+                        <div class="level-bar-inner" :style="{ width: 70 + '%' }" data-level="98%">
                         </div>                                      
                     </div><!--//level-bar-->                                 
                 </div><!--//item-->
@@ -100,7 +100,7 @@
                 <div class="item">
                     <h3 class="level-title">Angular</h3>
                     <div class="level-bar">
-                        <div class="level-bar-inner" data-level="98%">
+                        <div class="level-bar-inner" :style="{ width: 98 + '%' }" data-level="98%">
                         </div>                                      
                     </div><!--//level-bar-->                                 
                 </div><!--//item-->
@@ -108,7 +108,7 @@
                 <div class="item">
                     <h3 class="level-title">HTML5 &amp; CSS</h3>
                     <div class="level-bar">
-                        <div class="level-bar-inner" data-level="95%">
+                        <div class="level-bar-inner" :style="{ width: 95 + '%' }" data-level="95%">
                         </div>                                      
                     </div><!--//level-bar-->                                 
                 </div><!--//item-->
@@ -116,7 +116,7 @@
                 <div class="item">
                     <h3 class="level-title">Ruby on Rails</h3>
                     <div class="level-bar">
-                        <div class="level-bar-inner" data-level="85%">
+                        <div class="level-bar-inner" :style="{ width: 85 + '%' }" data-level="85%">
                         </div>                                      
                     </div><!--//level-bar-->                                 
                 </div><!--//item-->
@@ -124,7 +124,7 @@
                 <div class="item">
                     <h3 class="level-title">Sketch &amp; Photoshop</h3>
                     <div class="level-bar">
-                        <div class="level-bar-inner" data-level="60%">
+                        <div class="level-bar-inner" :style="{ width: 60 + '%' }">
                         </div>                                      
                     </div><!--//level-bar-->                                 
                 </div><!--//item-->
@@ -173,7 +173,7 @@ p {
 }
 .wrapper {
   background: #42A8C0;
-  max-width: 960px;
+  /*max-width: 960px;*/
   margin: 0 auto;
   position: relative;
   -webkit-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
@@ -415,4 +415,13 @@ p {
 </style>
 
 <script>
+export default {
+  name: 'portfolio',
+  data(){
+    return{
+        progress:70
+    }    
+  }
+}
+
 </script>

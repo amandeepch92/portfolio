@@ -9,7 +9,7 @@
   <div class="row">
       <div class="col-md-12">
         <div class="well well-sm mt-3">
-          <form class="form-horizontal">
+          <form class="form-horizontal" action="javascript:void(0);">
           <fieldset>
             <!-- Name input-->
             <div class="form-group row">
