@@ -5,8 +5,8 @@
             <h2 class="section-title"><i class="fa fa-user"></i>Career Profile</h2>
             <div class="summary">
                 <p>A dynamic and result driven software developer with a proven track record of 4+ years in the areas of software design & development, project management and product management. A technical specialist, having expertise in managing the complete Software Development Life Cycle (SDLC), formulating product road maps, defining user requirements and prioritization, providing architectural solutions and driving the development teams for adhering architecture principles. Experienced in front/back-end programming including Javascript , Angular Js , D3 js , Python , Mongo Db , SQL , Html , Css , Sass , R  and Jquery. Impressive track record of scoring excellent Project Performance ratings and driving business across complex and challenging environments and implementing tools, processes and methodologies. Expertise in managing software product lines by developing and adding new product functionalities and delivering customized product solutions in accordance with the client’s requirements. Consistently delivered projects within tight deadlines and resource limitations by implementing innovations in technology and specialized analytics tools for improving product performance. Passionate about working with large data sets, providing accurate predictions by way of statistical analysis and recommending strategic plans of action. Exceptional analytical skills along with deep inclination for honing skills and learning about the latest technological developments.</p>
-            </div><!--//summary-->
-        </section><!--//section-->
+            </div>
+        </section>
             
         <section class="section experiences-section">
             <h2 class="section-title"><i class="fa fa-briefcase"></i>Experiences</h2>
