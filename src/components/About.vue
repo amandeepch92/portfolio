@@ -102,7 +102,7 @@ export default {
 </script>
 <style scoped>
 .section{
-	padding-top: 50px;
+	padding-top: 40px;
 }
 .h4{
 	font-weight: 700;
