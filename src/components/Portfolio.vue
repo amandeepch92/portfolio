@@ -4,127 +4,39 @@
         <section class="section summary-section">
             <h2 class="section-title"><i class="fa fa-user"></i>Career Profile</h2>
             <div class="summary">
-                <p>A dynamic and result driven software developer with a proven track record of 4+ years in the areas of software design & development, project management and product management. A technical specialist, having expertise in managing the complete Software Development Life Cycle (SDLC), formulating product road maps, defining user requirements and prioritization, providing architectural solutions and driving the development teams for adhering architecture principles. Experienced in front/back-end programming including Javascript , Angular Js , D3 js , Python , Mongo Db , SQL , Html , Css , Sass , R  and Jquery. Impressive track record of scoring excellent Project Performance ratings and driving business across complex and challenging environments and implementing tools, processes and methodologies. Expertise in managing software product lines by developing and adding new product functionalities and delivering customized product solutions in accordance with the client’s requirements. Consistently delivered projects within tight deadlines and resource limitations by implementing innovations in technology and specialized analytics tools for improving product performance. Passionate about working with large data sets, providing accurate predictions by way of statistical analysis and recommending strategic plans of action. Exceptional analytical skills along with deep inclination for honing skills and learning about the latest technological developments.</p>
+                 <p>{{summary}}</p>
             </div>
-        </section>
-            
+        </section>            
         <section class="section experiences-section">
             <h2 class="section-title"><i class="fa fa-briefcase"></i>Experiences</h2>
             
-            <div class="item">
+            <div class="item" v-for="(item, index) in work">
                 <div class="meta">
                     <div class="upper-row">
-                        <h3 class="job-title">Lead Developer</h3>
-                        <div class="time">2015 - Present</div>
+                        <h3 class="job-title">{{item.pos}}</h3>
+                        <div class="time">{{item.time}}</div>
                     </div><!--//upper-row-->
-                    <div class="company">Startup Hubs, San Francisco</div>
+                    <div class="company">{{item.title}}</div>
                 </div><!--//meta-->
-                <div class="details">
-                    <p>Describe your role here lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo.</p>  
-                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. </p>
-                </div><!--//details-->
+                <div class="details">{{item.text}}</div><!--//details-->
             </div><!--//item-->
-            
-            <div class="item">
-                <div class="meta">
-                    <div class="upper-row">
-                        <h3 class="job-title">Senior Software Engineer</h3>
-                        <div class="time">2014 - 2015</div>
-                    </div><!--//upper-row-->
-                    <div class="company">Google, London</div>
-                </div><!--//meta-->
-                <div class="details">
-                    <p>Describe your role here lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</p>  
-                    
-                </div><!--//details-->
-            </div><!--//item-->
-            
-            <div class="item">
-                <div class="meta">
-                    <div class="upper-row">
-                        <h3 class="job-title">UI Developer</h3>
-                        <div class="time">2012 - 2014</div>
-                    </div><!--//upper-row-->
-                    <div class="company">Amazon, London</div>
-                </div><!--//meta-->
-                <div class="details">
-                    <p>Describe your role here lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</p>  
-                </div><!--//details-->
-            </div><!--//item-->
-            
         </section><!--//section-->
             
         <section class="section projects-section">
             <h2 class="section-title"><i class="fa fa-archive"></i>Projects</h2>
-            <div class="intro">
-                <p>You can list your side projects or open source libraries in this section. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum et ligula in nunc bibendum fringilla a eu lectus.</p>
-            </div><!--//intro-->
-            <div class="item">
-                <span class="project-title"><a href="#hook">Velocity</a></span> - <span class="project-tagline">A responsive website template designed to help startups promote, market and sell their products.</span>
+            <div class="item" v-for="project in portfolio">
+                <span class="project-title"><a href="#hook">{{project.title}}</a></span> - <span class="project-tagline">{{project.text}}</span>
                 
-            </div><!--//item-->
-            <div class="item">
-                <span class="project-title"><a href="http://themes.3rdwavemedia.com/website-templates/responsive-bootstrap-theme-web-development-agencies-devstudio/" target="_blank">DevStudio</a></span> - 
-                <span class="project-tagline">A responsive website template designed to help web developers/designers market their services. </span>
-            </div><!--//item-->
-            <div class="item">
-                <span class="project-title"><a href="http://themes.3rdwavemedia.com/website-templates/responsive-bootstrap-theme-for-startups-tempo/" target="_blank">Tempo</a></span> - <span class="project-tagline">A responsive website template designed to help startups promote their products or services and to attract users &amp; investors</span>
-            </div><!--//item-->
-            <div class="item">
-                <span class="project-title"><a href="hhttp://themes.3rdwavemedia.com/website-templates/responsive-bootstrap-theme-mobile-apps-atom/" target="_blank">Atom</a></span> - <span class="project-tagline">A comprehensive website template solution for startups/developers to market their mobile apps. </span>
-            </div><!--//item-->
-            <div class="item">
-                <span class="project-title"><a href="http://themes.3rdwavemedia.com/website-templates/responsive-bootstrap-theme-for-mobile-apps-delta/" target="_blank">Delta</a></span> - <span class="project-tagline">A responsive Bootstrap one page theme designed to help app developers promote their mobile apps</span>
             </div><!--//item-->
         </section><!--//section-->
             
         <section class="skills-section section">
             <h2 class="section-title"><i class="fa fa-rocket"></i>Skills &amp; Proficiency</h2>
             <div class="skillset">        
-                <div class="item">
-                    <h3 class="level-title">Python &amp; Django</h3>
+                <div class="item" v-for="skills in proficiency">
+                    <h3 class="level-title">{{skills.title}}</h3>
                     <div class="level-bar">
-                        <div class="level-bar-inner" :style="{ width: 87 + '%' }" data-level="98%">
-                        </div>                                      
-                    </div><!--//level-bar-->                                 
-                </div><!--//item-->
-                
-                <div class="item">
-                    <h3 class="level-title">Javascript &amp; jQuery</h3>
-                    <div class="level-bar">
-                        <div class="level-bar-inner" :style="{ width: 70 + '%' }" data-level="98%">
-                        </div>                                      
-                    </div><!--//level-bar-->                                 
-                </div><!--//item-->
-                
-                <div class="item">
-                    <h3 class="level-title">Angular</h3>
-                    <div class="level-bar">
-                        <div class="level-bar-inner" :style="{ width: 98 + '%' }" data-level="98%">
-                        </div>                                      
-                    </div><!--//level-bar-->                                 
-                </div><!--//item-->
-                
-                <div class="item">
-                    <h3 class="level-title">HTML5 &amp; CSS</h3>
-                    <div class="level-bar">
-                        <div class="level-bar-inner" :style="{ width: 95 + '%' }" data-level="95%">
-                        </div>                                      
-                    </div><!--//level-bar-->                                 
-                </div><!--//item-->
-                
-                <div class="item">
-                    <h3 class="level-title">Ruby on Rails</h3>
-                    <div class="level-bar">
-                        <div class="level-bar-inner" :style="{ width: 85 + '%' }" data-level="85%">
-                        </div>                                      
-                    </div><!--//level-bar-->                                 
-                </div><!--//item-->
-                
-                <div class="item">
-                    <h3 class="level-title">Sketch &amp; Photoshop</h3>
-                    <div class="level-bar">
-                        <div class="level-bar-inner" :style="{ width: 60 + '%' }">
+                        <div class="level-bar-inner" :style="{ width:skills.weightage + '%' }" data-level="98%">
                         </div>                                      
                     </div><!--//level-bar-->                                 
                 </div><!--//item-->
@@ -135,7 +47,79 @@
     </div>
 </div>
 </template>
+<script>
+export default {
+  name: 'portfolio',
+  data(){
+    return{
+       summary:'A dynamic and result driven software developer with a proven track record of 4+ years in the areas of software design & development, project management and product management. A technical specialist, having expertise in managing the complete Software Development Life Cycle (SDLC), formulating product road maps, defining user requirements and prioritization, providing architectural solutions and driving the development teams for adhering architecture principles. Experienced in front/back-end programming including Javascript , Angular Js , D3 js , Python , Mongo Db , SQL , Html , Css , Sass , R  and Jquery. Impressive track record of scoring excellent Project Performance ratings and driving business across complex and challenging environments and implementing tools, processes and methodologies. Expertise in managing software product lines by developing and adding new product functionalities and delivering customized product solutions in accordance with the client’s requirements. Consistently delivered projects within tight deadlines and resource limitations by implementing innovations in technology and specialized analytics tools for improving product performance. Passionate about working with large data sets, providing accurate predictions by way of statistical analysis and recommending strategic plans of action. Exceptional analytical skills along with deep inclination for honing skills and learning about the latest technological developments.',
+       work:[
+        {
+            title:'Newgen Software Technology',
+            pos:'Software Developer',
+            time:'June 2014 - Nov 2015',
+            text:'Worked as Software Developer in Research & Development department at Devops.Worked on several different projects For development I mainly used JavaScript/jQuery, Node Js , Angular Js , Vue Js HTML, CSS and Microsoft SQL Server.'
+        },
+        {
+            title:'HT Media',
+            pos:'Software Developer',
+            time:'Nov 2015 - Present',
+            text:'Working as Software Developer in Media Domain Responsible for the development of a module for an existing desktop application.Worked with Jquery , React , Vue and Mongo DB.'
+        }
+      ],
+      portfolio:[
+        {
+            title:'Time Tracking Management', 
+            text:'Time Tracking Management based on time sheet input , based on java , Html , jQuery.',
+        },
+        {
+            title:'DevOps', 
+            text:'A web application for integration of Developement and operation based on Java , D3 js , Jquery , Angular Js.',
+        },
+        {
+            title:'Recruiter Microsite', 
+            text:'Generator based applcation for different recruiter based on Angular Js , Django ,Sass.',
+        }
+      ],
+    proficiency:[
+      {
+        title:'Html',
+        weightage:80
+      },
+      {
+        title:'Css',
+        weightage:83
+      },
+      {
+        title:'Js',
+        weightage:85
+      },
+      {
+        title:'Scss',
+        weightage:75
+      },
+      {
+        title:'React',
+        weightage:70
+      },
+      {
+        title:'Angular',
+        weightage:81
+      },
+      {
+        title:'Vue',
+        weightage:86
+      },
+      {
+        title:'Jquery',
+        weightage:88
+      },
 
+      ]
+    }    
+  }
+}
+</script>
 <style>
 /* ======= Base ======= */
 body {
@@ -414,14 +398,3 @@ p {
 
 </style>
 
-<script>
-export default {
-  name: 'portfolio',
-  data(){
-    return{
-        progress:70
-    }    
-  }
-}
-
-</script>
